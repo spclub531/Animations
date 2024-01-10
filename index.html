@@ -1,76 +1,95 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Webpage Title</title>
+    <title> css basis assignment</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        *{
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
         }
-
-        header, nav, article, aside, footer {
+        header{
+            background-color: blue;
+            margin: 0;
+            padding: 50px;
+            border: 0;
+        }
+        nav{
             background-color: aqua;
-            padding: 20px;
-            border: 1px solid #d30b0b;
             margin: 10px;
+            padding: 15px;
+            border: 0;
         }
-
-        header, footer {
-            background-color: #272b8e;
-            text-align: center;
+        main{
+            background-color:red;
+           height: 500px;
+           width: 1000px;
         }
-
-        nav {
-            background-color: #d3d3d3;
+        .div{
+            /* display: inline; */
+            float: left;
+            display: grid;
+            justify-content: space-between;
         }
-
-        article {
-            flex: 3;
+        .section1{
+                  background-color:brown;
+                  height: 48%;
+                  width: 48%;
+                  margin: 5px;
+                  
+                  
         }
-
-        aside {
-            flex: 1;
+        article{
+            background-color: black;
+            margin: 5px;
+            padding: 5px;
+            width: 30%;
+            height: 30%;
         }
-
-        /* Add additional styles as needed */
+        aside{
+            background-color:lightgoldenrodyellow;
+            height:50%;
+            width:50%;
+        }
+        .footer{
+            background-color: black;
+            height: 500px;
+            width: 1000px;
+        }
     </style>
 </head>
 <body>
-    <header>
-        <!-- Header content goes here -->
-        <h1>Your Website Name</h1>
+
+    <!-- header section -->
+    <header class="header">
+        HEADER
+        <nav>
+            nav 
+        </nav>
     </header>
-
-    <nav>
-        <!-- Navigation menu goes here -->
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
-    </nav>
-
-    <main>
-        <article>
-            <!-- Main content goes here -->
-            <h2>Main Content</h2>
-            <p>Your article content here.</p>
-        </article>
-
-        <aside>
-            <!-- Sidebar content goes here -->
-            <h2>Aside Section</h2>
-            <p>Your aside content here.</p>
-        </aside>
+     <!-- main section -->
+<div class="div">
+    <main class="main" >
+       <section class="section1">section</section>
+       <section class="section1">section
+        <article></article>
+        <article></article>
+       </section>
     </main>
+   
+    <!-- aside section  -->
+    <aside class="aside">
+        <section class="aside section">
 
-    <footer>
-        <!-- Footer content goes here -->
-        <p>&copy; 2024 Your Website. All rights reserved.</p>
+        </section>
+        <section class="aside section">
+
+        </section>
+    </aside>
+</div>
+       <!-- footer section  -->
+    <footer class="footer">
+   footer
     </footer>
 </body>
 </html>
