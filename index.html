@@ -2,267 +2,224 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-	<style>
-		@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
-* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-}
+    <title>grid magazine</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            height: 100%;
+            width: 100%;
+            
+        
+        }
+        header{
+            text-align: center;
+            background-color: black;
+        }
+       h1{
+        color: chocolate;
+        text-align: center;
+       }
+       p{
+        color: chocolate;
+        text-align: center;
+       }
+        .image{
+            display: flex;
+            height: 30;
+            /* width: ; */
+            justify-content: space-between;
+        }
+        .line{
+            display: flex;
+            justify-content: space-between;
 
-body {
-	font-family: "Poppins", sans-serif;
-	padding: 45px 0;
-	background-color: #e5ebf2;
-	color: #48556a;
-	font-size: 14px;
-	line-height: 1.4;
-}
+        }
+        .line h3{
+            color: aliceblue;
+        }
+        .testimonial h3{
+            color: blue;
+        }
+        /* mid section */
+        article{
+            background-color: aquamarine;
+        }
+        
+        
+     .grid-container{
+        display: grid;
+        grid-template-columns: 50px 50px 50px;
+        height:fit-content;
+        width: fit-content;
+        /* width: 1170px; */
+	    /* padding: 15px; */
+	    /* max-width: 100%; */
+	    margin: 0 auto;
+	    /* display: grid; */
+	    grid-template-rows: 0 500px 800px;
+        column-gap: 100px;
+        
+	
+     }
+     /* footer section */
+     footer{
+        /* height: 100;
+        width: 100; */
+        background-color: bisque;
+        
+     }
+     footer p{
+        /* text-align: left; */
+     }
+     .change{
+        display: flex;
+        justify-content: space-between;
+     }
+     .change h2 b{
+        height: 30;
+        width: 20;
+        border-radius: 20;
+        border-width: 20px;
+        background-color: aliceblue;
+        grid-area: 1/2/3/4;
+        /* margin-block-start: 5em;
+    margin-block-end: 5em;
+    margin-inline-start: 5px;
+    margin-inline-end: 5px; */
 
-.testimonial-grid {
-	width: 1170px;
-	padding: 15px;
-	max-width: 100%;
-	margin: 0 auto;
-	display: grid;
-	grid-template-columns: 1fr;
-	gap: 1.5rem;
-}
+     }
+     .change img{
+        height: 30;
+        width: 30;
+     }
+     .change a{
+        /* height: 20;
+        width: 20; */
+        border-radius: 20;
+        color: white;
+        background-color: black;
+     }
+     .new p{
+        color: blue;
+     }
+     .size img{
+        height: 60;
+        width: 60;
+     }
+     .end img{
+        height: 60;
+        width: 80;
+     }
+     .football{
+        display: grid;
+        grid-template-columns: 50px 50px 50px;
+        height:fit-content;
+        width: fit-content;
+         /* width: 1170px; 
+	     padding: 15px;  */
+	    max-width: 100%;
+	    margin: 0 auto;
+	    
+	    grid-template-rows: 200 200px 200px;
+        column-gap: 100px;
+        
 
-.testimonial {
-	background-color: #fff;
-	padding: 1.25rem;
-	border-radius: 5px;
-	box-shadow: 0 0 1px rgb(190, 186, 186);
-}
-.testimonial > div {
-	display: flex;
-	align-items: center;
-	margin-bottom: 1rem;
-}
-.testimonial img {
-	width: 50px;
-	height: 50px;
-	border-radius: 50%;
-	margin-right: 10px;
-}
-
-.testimonial h2 {
-	font-size: 1rem;
-}
-.testimonial h5 {
-	font-size: 0.8rem;
-	color: rgba(72, 85, 106, 0.7);
-}
-.testimonial h3 {
-	margin: 1rem 0;
-	font-size: 1rem;
-}
-
-.testimonial:first-of-type {
-	background-color: #753acb;
-	background-image: url("https://raw.githubusercontent.com/thenahidul/css-grid-testimonial/main/images/bg-pattern-quotation.svg");
-	background-position: top 1.25rem right 15%;
-	background-repeat: no-repeat;
-}
-.testimonial:nth-of-type(2) {
-	background-color: #47546b;
-}
-.testimonial:nth-of-type(4) {
-	background-color: #19212e;
-}
-
-.testimonial h2,
-.testimonial h3,
-.testimonial h5 {
-	font-weight: 500;
-}
-
-
-.testimonial:first-of-type,
-.testimonial:nth-of-type(2),
-.testimonial:nth-of-type(4) {
-	color: #fff;
-}
-.testimonial:first-of-type h5,
-.testimonial:first-of-type p,
-.testimonial:nth-of-type(2) h5,
-.testimonial:nth-of-type(2) p,
-.testimonial:nth-of-type(4) h5,
-.testimonial:nth-of-type(4) p {
-	color: rgb(255, 255, 255, 0.7);
-}
-
-@media (min-width: 768px) {
-	.testimonial-grid {
-		grid-template-columns: repeat(4, 1fr);
-	}
-
-	.testimonial:first-of-type {
-		grid-column: span 2;
-	}
-
-	.testimonial:nth-of-type(4) {
-		grid-column: span 2;
-	}
-	.testimonial:nth-of-type(5) {
-		grid-row: 1 / 3;
-		grid-column: 4 / -1;
-	}
-}
-
-
-/* extra */
-.copyright {
-	text-align: center;
-	margin-top: 30px;
-	font-size: 1.6rem;
-	background-color: #ededed;
-}
-.copyright a {
-	display: inline-block;
-	padding: 15px 2px;
-}
-.copyright a:not(:last-child):after{
-	content: "/";
-	margin-left: 10px;
-}
-
-.toptal {
-	color: #204ecf;
-}
-
-.upstack {
-	color: #008bf7;
-}
-
-.upwork {
-	color: #37a000;
-}
-
-.fiverr {
-	color: #1dbf73;
-}
-
-.jobs {
-	color: magenta;
-	text-decoration: underline;
-	margin-top: -15px;
-}
-
-	</style>
+     }
+     
+        
+    </style>
 </head>
 <body>
-    <div class="testimonial-grid">
-		<article class="testimonial">
-			<div>
-				<img src="https://raw.githubusercontent.com/thenahidul/css-grid-testimonial/main/images/image-daniel.jpg">
-				<div>
-					<h2>Daniel Clifford</h2>
-					<h5>Verified Graduate</p>
-				</div>
-			</div>
-			<h3>
-				I received a job offer mid-course, and the subjects I learned were current, if not more so,
-				in the company I joined. I honestly feel I got every penny’s worth.
-			</h3>
-			<p>
-				“ I was an EMT for many years before I joined the bootcamp. I’ve been looking to make a
-				transition and have heard some people who had an amazing experience here. I signed up
-				for the free intro course and found it incredibly fun! I enrolled shortly thereafter.
-				The next 12 weeks was the best - and most grueling - time of my life. Since completing
-				the course, I’ve successfully switched careers, working as a Software Engineer at a VR startup. ”
-			</p>
-		</article>
-		<article class="testimonial">
-			<div>
-				<img src="https://raw.githubusercontent.com/thenahidul/css-grid-testimonial/main/images/image-jonathan.jpg" alt="Jonathan Walters">
-				<div>
-					<h2>Jonathan Walters</h2>
-					<h5>Verified Graduate</p>
-				</div>
-			</div>
-			<h3>
-				The team was very supportive and kept me motivated
-			</h3>
-			<p>
-				“ I started as a total newbie with virtually no coding skills. I now work as a mobile engineer
-				for a big company. This was one of the best investments I’ve made in myself. ”
-			</p>
-		</article>
+    <header>
+        <div>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/3/39/FreeCodeCamp_logo.png?20191220141126" alt="">
+        
+    </div>
+    <h1>
+        OUR NEW CURRICULUM
+    </h1>
+    <P>
+        our efforts to restructure our curriculum with a more project based-focus
+    </P>
+    <div class="line">
+        <div class="one">
+        <h3>By freecode camp</h3>
+        <h3>March 7,2019</h3>
+    </div>
+        <div class="image">
+            <img src="https://img.freepik.com/premium-vector/facebook-app-icon-social-media-logo-vector-illustration-meta_277909-402.jpg" alt="">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNmzfXlB_zXLNsD2uUGUAo_Po72qatO8cUNClZzxLjZA&s" alt="">
+            <img src="https://centaur-wp.s3.eu-central-1.amazonaws.com/designweek/prod/content/uploads/2016/05/11170038/Instagram_Logo-1002x1003.jpg" alt="">
+            <img src="https://img.freepik.com/premium-vector/linkedin-icon-paper-cut-style-social-media-icons_505135-239.jpg" alt="">
+            <img src="https://cdn3.iconfinder.com/data/icons/social-network-30/512/social-06-512.png" alt="">
+        </div>
 
-		<article class="testimonial">
-			<div>
-				<img src="https://raw.githubusercontent.com/thenahidul/css-grid-testimonial/main/images/image-jeanette.jpg" alt="Jeanette Harmon">
-				<div>
-					<h2>Jeanette Harmon</h2>
-					<h5>Verified Graduate</p>
-				</div>
-			</div>
-			<h3>
-				An overall wonderful and rewarding experience</h3>
-			<p>
-				“ Thank you for the wonderful experience! I now have a job I really enjoy, and make a good living
-				while doing something I love. ”
-			</p>
-		</article>
-		<article class="testimonial">
-			<div>
-				<img class="border-primary-400" src="https://raw.githubusercontent.com/thenahidul/css-grid-testimonial/main/images/image-patrick.jpg" alt="Patrick Abrams">
-				<div>
-					<h2>Patrick Abrams</h2>
-					<h5>Verified Graduate</p>
-				</div>
-			</div>
-			<h3>
-				Awesome teaching support from TAs who did the bootcamp themselves. Getting guidance from them and
-				learning from their experiences was easy.
-			</h3>
-			<p>
-				“ The staff seem genuinely concerned about my progress which I find really refreshing. The program
-				gave me the confidence necessary to be able to go out in the world and present myself as a capable
-				junior developer. The standard is above the rest. You will get the personal attention you need from
-				an incredible community of smart and amazing people. ”
-			</p>
-		</article>
-		<article class="testimonial">
-			<div>
-				<img src="https://raw.githubusercontent.com/thenahidul/css-grid-testimonial/main/images/image-kira.jpg" alt="Kira Whittle">
-				<div>
-					<h2>Kira Whittle</h2>
-					<h5>Verified Graduate</p>
-				</div>
-			</div>
-			<h3>
-				Such a life-changing experience. Highly recommended!
-			</h3>
-			<p>
-				“ Before joining the bootcamp, I’ve never written a line of code. I needed some structure from
-				professionals who can help me learn programming step by step. I was encouraged to enroll by a former
-				student of theirs who can only say wonderful things about the program. The entire curriculum and staff
-				did not disappoint. They were very hands-on and I never had to wait long for assistance. The agile team
-				project, in particular, was outstanding. It took my learning to the next level in a way that no tutorial
-				could ever have. In fact, I’ve often referred to it during interviews as an example of my developent
-				experience. It certainly helped me land a job as a full-stack developer after receiving multiple offers.
-				100% recommend! ”
-			</p>
-		</article>
-	</div>
+    </div>
+    </header>
+    <!-- mid section -->
+    <article>
+        <div class="grid-container">
+        <div class="testimonial">
+           <b>L</b> orem ipsum dolor sit amet consectetur adipisicing elit. Consectetur laborum cum tenetur quae totam, atque autem consequatur aperiam dolores veniam quaerat quibusdam quos quod cupiditate nesciunt suscipit! Labore dolorem iste consectetur voluptates sapiente consequuntur illum harum ad nam illo nihil suscipit magnam repudiandae blanditiis aspernatur exercitationem minus cupiditate expedita dicta ea temporibus, laboriosam quibusdam distinctio! Blanditiis accusantium exercitationem quibusdam eligendi quaerat eum repellendus, non illo. Quaerat tempora vero doloribus blanditiis.
+        </div>
+       <div class="testimonal">
+        <div class="testimonial">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, totam exercitationem harum dolor voluptatum accusamus iure, maiores animi necessitatibus blanditiis dolore corporis provident, voluptates inventore ut ipsam molestias voluptatem tempora.
+        </div>
+        <div class="testimonial">
+            <hr>
+           <b><h3>The entire curriculum should be a series of project</h3></b>
+           <hr>
+        </div>
+        <div class="testimonial"> 
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo ipsam, dolorum sapiente inventore dolorem sint atque numquam. Excepturi sequi voluptates velit ipsum! Quibusdam, minus dolore officiis ducimus accusantium soluta impedit
 
-<!-- extra -->
-<div class="copyright">
-	<p>
-		Me On:
-		<a href="https://www.toptal.com/resume/md-nahidul-islam" target="_blank" class="toptal">Toptal</a>
-		
-		<a href="https://upstack.co/team/md-35" target="_blank" class="upstack">Upstack</a>
-		
-		<a href="https://www.upwork.com/o/profiles/users/_~0195eb53c731b0e159/" target="_blank" class="upwork">UpWork</a>
-
-		<a href="https://www.fiverr.com/thenahidul" target="_blank" class="fiverr">Fiverr</a>
-	</p>
-	<a href="https://www.toptal.com/B7avWk/worlds-top-talent" class="jobs" target="_blank">Jobs</a>
-</div> 
+        </div>
+       </div>
+        <div class="testimonial">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit natus debitis quam rem praesentium, blanditiis laboriosam deleniti accusantium a molestiae voluptatum ut nostrum. Inventore beatae ex quos in tempore error velit a? Sapiente debitis inventore expedita iusto excepturi aliquam enim dolorum laborum molestias modi eveniet numquam, fugiat quia, accusamus saepe provident, perferendis dignissimos cum exercitationem commodi! Sint doloribus praesentium, voluptates cumque possimus eaque nam, tenetur nisi nihil amet, dolores voluptate?
+        </div>
+        </div>
+       
+    </article>
+    <footer>
+        <div class="football">
+        <div class="gun">
+            <h3>A brief history</h3>
+            <p>of the curriculum</p>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis ipsam iure fugiat asperiores placeat veniam sunt, reiciendis nemo cum molestias cupiditate id odio, impedit blanditiis itaque in eveniet eligendi fuga illum nostrum libero amet expedita rerum aliquam! Saepe facere, tempora laudantium omnis esse, ratione quos exercitationem molestiae a repudiandae placeat quaerat laboriosam dicta modi nobis! Sunt, consequatur! Iusto eius aperiam officia consectetur ducimus. Magnam veniam provident quaerat id, rem dolorem.</p>
+        </div>
+        <div>
+            <div class="change">
+                <h2><b>Remeber that not getting what you want is sometimes wonderful stroke of luck</b></h2>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNmzfXlB_zXLNsD2uUGUAo_Po72qatO8cUNClZzxLjZA&s" alt="">
+                <img src="https://p1.hiclipart.com/preview/706/539/832/flat-gradient-social-media-icons-tumblr-t-logo-png-clipart.jpg" alt="">
+                <div>
+                    <a href="">new quote</a>
+                </div>
+               
+            </div>
+        </div>
+        <div>
+        <div class="size">
+        <img src="https://static.vecteezy.com/system/resources/previews/017/359/381/original/app-screen-calculator-in-mobile-phone-design-ui-kit-free-vector.jpg" alt="">
+    </div>
+    <div class="new">
+        <p>
+            The millions of people who are leraning through free code camp wil have an even better resource to help them learn this fundamentals
+        </p>
+    </div>
+    <div class="end">
+        <img src="https://c8.alamy.com/comp/KGT866/group-of-students-working-in-computer-lab-KGT866.jpg" alt="">
+    </div>
+</div>
+    </div>
+    </footer>
+    
+   
+    
 </body>
 </html>
