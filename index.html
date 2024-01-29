@@ -2,30 +2,53 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Media Queries</title>
+  <title>Animation</title>
   <style>
-    body{
+    *{
       margin: 0;
-      height: 100%;
-      background-color: rgb(14, 14, 14);
+      padding: 0;
+      box-sizing: border-box;
     }
-.first{
-display: block;
-user-select: none;
-margin: auto;
-cursor: zoom-in;
-background-color: hsl(0, 0%, 90%);
-transition:background-colour 300ms;
-width: 662;
-height: 441;
-
-}
+    body{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #000;
+      min-height: 100vh;
+    }
+    .container{
+      display: flex;
+      width: 1100;
+      justify-content: space-between;
+      -webkit-box-reflect: below 1px ;
+      
+    }
+    .container img{
+      max-width: 350px;
+      transform-origin: center;
+      transform: perspective(800px) rotate(20deg);
+      transition: 0.5s;
+      box-shadow: 0px 0px 8px grey;
+      border-radius: 5px;
+    }
+    .container:hover img{
+      opacity: 0.3;
+    }
+    .container img:hover{
+      transform: perspective(800px) rotate(0deg);
+      opacity: 1;
+    }
 
   </style>
+  
 </head>
-<body class="first">
-  <img src="https://images01.nicepagecdn.com/page/11/02/css-template-preview-110226.webp" alt="">
-
+<body>
+<div class="container">
+  <img src="https://5.imimg.com/data5/SELLER/Default/2022/2/NB/EL/PC/38398720/gold-rolex-watch.jpeg" alt="">
+  <img src="https://5.imimg.com/data5/GP/UF/ZR/SELLER-27950412/patek-phillips-mens-watch-500x500.jpg" alt="">
+  <img src="https://dillibazar.co.in/wp-content/uploads/Rolex-Cosmograph-Daytona-Rainbow-Watch-1.jpg" alt="">
+  
+  </div>
   
 </body>
 </html>
